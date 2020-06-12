@@ -17,13 +17,13 @@ project 1 - A Random Quote Generator
 /***
  * `getRandomQuote` function
 ***/
-
+function getRandomQuote ()
 
 
 /***
  * `printQuote` function
 ***/
-
+function printQuote()
 
 
 /***
