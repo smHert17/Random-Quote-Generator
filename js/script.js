@@ -12,18 +12,24 @@ project 1 - A Random Quote Generator
 ***/
 
 
-
+let message = '';
+let quote;
 
 /***
  * `getRandomQuote` function
 ***/
-function getRandomQuote ()
+function getRandomQuote () {
+  
+}
 
 
 /***
  * `printQuote` function
 ***/
-function printQuote()
+function printQuote(message) {
+  var outputDiv = document.getElementById('output');
+  outputDiv.innerHTML = message;
+}
 
 
 /***

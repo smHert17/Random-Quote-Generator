@@ -1,7 +1,8 @@
 let quotes = [
       {
-        quote:` "Get busy living or get busy dying."`,
-        author: '- Stephen King'
+        quote: `"Get busy living or get busy dying."`,
+        author: '- Stephen King, Shawshank Redemption',
+        year: '1982'
       },
       {
         quote: `"I’m selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle.
