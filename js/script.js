@@ -19,7 +19,7 @@ let quote;
  * `getRandomQuote` function
 ***/
 function getRandomQuote () {
-  for (i = 0, i <= quotes.length, i += 1) {}
+  let randomQuote = Math.floor(Math.random()*(quotes.length));
 }
 
 
