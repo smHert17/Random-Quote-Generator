@@ -12,14 +12,15 @@ project 1 - A Random Quote Generator
 ***/
 
 
-let message = '';
-let quote;
 
 /***
  * `getRandomQuote` function
+ *This function uses Math.floor and Math.random functions to generate a quote from the quotesArr based off it's length. In this case 0-10.
 ***/
 function getRandomQuote () {
-  let randomQuote = Math.floor(Math.random()*(quotes.length));
+  let getRandom = Math.floor(Math.random()*(quotes.length));
+    randomQuote = quotesArr[getRandom];
+    return randomQuote
 }
 
 

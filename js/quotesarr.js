@@ -1,7 +1,8 @@
-let quotes = [
+let quotesArr = [
       {
         quote: `"Get busy living or get busy dying."`,
-        author: '- Stephen King, Shawshank Redemption',
+        source: '- Stephen King',
+        citation: 'Shawshank Redemption',
         year: '1982'
       },
       {
