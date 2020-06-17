@@ -104,11 +104,12 @@ function printQuote() {
 
   let showQuote = `<p class = "quote">${randomQuote.quote}</p>`
       showQuote = `<p class = "source">${randomQuote.source}
-         if (randomQuote !== -1){
+
+         if (randomQuote !== undifined){
            showQuote += `<span class = 'citation'> ${randomQuote.citation}`
          }
 
-         if (randomQuote !== -1) {
+         if (randomQuote !== undifined) {
            showQuote += `<span class = 'year'> ${randomQuote.year}`
          }
 
