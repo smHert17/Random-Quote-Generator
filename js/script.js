@@ -89,9 +89,9 @@ let quotesArr = [
  *Returns a random number based off the "quotesArr" length.
 ***/
 function getRandomQuote () {
-  let getRandom = Math.floor(Math.random()*(quotes.length));
+  let getRandom = Math.floor(Math.random() * quotesArr.length);
     randQuote = quotesArr[getRandom];
-    return randomQuote
+    return randQuote
 }
 
 
@@ -100,20 +100,20 @@ function getRandomQuote () {
  *Prints quoteArr objects and puts them in the correct html slots based off their class names.
 ***/
 function printQuote() {
-  let randomQuote = getRandomQuote()
+  let randomQuote = getRandomQuote();
 
-  let showQuote = `<p class = "quote">${randomQuote.quote}</p>`
-      showQuote = `<p class = "source">${randomQuote.source}
+  let showQuote = `<p class = "quote">${randomQuote.quote}</p>`;
+      showQuote = `<p class = "source">${randomQuote.source}`;
 
-         if (randomQuote !== undifined){
-           showQuote += `<span class = 'citation'> ${randomQuote.citation}`
+         if (randomQuote.citation !== undifined){
+           showQuote += `<span class = 'citation'> ${randomQuote.citation}</span>`
          }
 
-         if (randomQuote !== undifined) {
-           showQuote += `<span class = 'year'> ${randomQuote.year}`
+         if (randomQuote.year !== undifined) {
+           showQuote += `<span class = 'year'> ${randomQuote.year}</span>`
          }
 
-         showquotes += </p>`;
+         showQuote += `</p>`;
 
 
       document.getElementById('quote-box').innerHTML = showQuote;
