@@ -15,22 +15,37 @@ project 1 - A Random Quote Generator
 
 /***
  * `getRandomQuote` function
- *This function uses Math.floor and Math.random functions to generate a quote from the quotesArr based off it's length. In this case 0-10.
+ *Returns a random number based off the "quotesArr" length.
 ***/
 function getRandomQuote () {
   let getRandom = Math.floor(Math.random()*(quotes.length));
-    randomQuote = quotesArr[getRandom];
+    randQuote = quotesArr[getRandom];
     return randomQuote
 }
 
 
 /***
  * `printQuote` function
+ *Prints quoteArr objects and puts them in the correct html slots based off their class names.
 ***/
-function printQuote(message) {
-  var outputDiv = document.getElementById('output');
-  outputDiv.innerHTML = message;
-}
+function printQuote() {
+  let randomQuote = getRandomQuote()
+
+  let showQuote = `<p class = "quote">${randomQuote.quote}</p>`
+      showQuote = `<p class = "source">${randomQuote.source}
+         if (randomQuote !== -1){
+           showQuote += `<span class = 'citation'> ${randomQuote.citation}`
+         }
+
+         if (randomQuote !== -1) {
+           showQuote += `<span class = 'year'> ${randomQuote.year}`
+         }
+
+         showquotes += </p>`;
+
+
+      document.getElementById('quote-box').innerHTML = showQuote;
+
 
 
 /***
