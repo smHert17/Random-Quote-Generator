@@ -10,74 +10,73 @@ project 1 - A Random Quote Generator
 /***
  * `quotes` array
 ***/
-let quotesArr = [
+let quotes = [
       {
-        quote: `"Get busy living or get busy dying."`,
+        quote: "Get busy living or get busy dying.",
         source: '- Stephen King',
         citation: 'Shawshank Redemption',
         year: '1982'
       },
       {
-        quote: `"I’m selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle.
-        But if you can’t handle me at my worst, then you sure as hell don’t deserve me at my best."`,
-        source: '– Marilyn Monroe',
-        citation: 'c',
-        year: 'y'
+        quote: "You think I look like I got money?",
+        source: '–Spike Spiegel ',
+        citation: 'Cowboy Bebop, Episode 12',
+        year: 'October 7, 2001'
       },
       {
-        quote: `"The first step toward success is taken when you refuse to be a captive of the environment in which you first find yourself."`,
-        source: '– Mark Caine',
-        citation: 'c',
-        year: 'y'
+        quote: "Q!",
+        source: '– Captain Jean-Luc Picard',
+        citation: 'Star Trek: The Next Generation',
+        year: 'September 28, 1987 to May 23, 1994'
       },
       {
-        quote: `"When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has been opened for us."`,
-        source: '– Helen Keller',
-        citation: 'c',
-        year:
+        quote: "War is cruelty. There is no use trying to reform it; the crueler it is, the sooner it will be over.",
+        source: '– William Tecumseh Sherman',
+        citation: 'The Civil War Generation',
+        year: '1864'
       },
       {
-        quote: `"Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do."`,
-        source: '– Mark Twain',
-        citation: 'c',
-        year: 'y'
+        quote: " Ladies and gentlemen, I don't know whether you fully understand that I have just been shot, but it takes more than that to kill a Bull Moose.",
+        source: '– Theodore Roosevelt',
+        citation: 'Wikipedia',
+        year: 'October 14, 1912'
       },
       {
-        quote: `"When I dare to be powerful – to use my strength in the service of my vision, then it becomes less and less important whether I am afraid."`,
+        quote: "When I dare to be powerful – to use my strength in the service of my vision, then it becomes less and less important whether I am afraid.",
         source: '– Audre Lorde',
-        citation: 'c',
-        year: 'y'
+        citation: 'The Cancer Journals',
+        year: '1980'
       },
-      {
-        quote: `"Great minds discuss ideas; average minds discuss events; small minds discuss people."`,
+      /*{
+        quote: "Great minds discuss ideas; average minds discuss events; small minds discuss people.",
         source: '– Eleanor Roosevelt',
         citation: 'c',
         year: 'y'
       },
       {
-        quote: `"A successful man is one who can lay a firm foundation with the bricks others have thrown at him."`,
+        quote: "A successful man is one who can lay a firm foundation with the bricks others have thrown at him.",
         source: '– David Brinkley',
         citation: 'c',
         year: 'y'
       },
       {
-        quote: `"Those who dare to fail miserably can achieve greatly."`,
+        quote: "Those who dare to fail miserably can achieve greatly.",
         source: '– John F. Kennedy',
         citation: 'c',
         year: 'y'
       },
       {
-        quote: `"I can’t give you a sure-fire formula for success, but I can give you a formula for failure: try to please everybody all the time."`,
+        quote: "I can’t give you a sure-fire formula for success, but I can give you a formula for failure: try to please everybody all the time.",
         source: '-Herbert Bayard Swope',
         citation: 'c',
         year: 'y'
       },
       {
-        quote: `"It is hard to fail, but it is worse never to have tried to succeed."`,
+        quote: "It is hard to fail, but it is worse never to have tried to succeed.",
         source: '– Theodore Roosevelt',
         citation: 'c',
         year: 'y'
-      }
+      }*/
 
 ];
 
@@ -89,37 +88,37 @@ let quotesArr = [
  *Returns a random number based off the "quotesArr" length.
 ***/
 function getRandomQuote () {
-  let getRandom = Math.floor(Math.random() * quotesArr.length);
-    randQuote = quotesArr[getRandom];
+  let getRandom = Math.floor(Math.random() * quotes.length);
+    randQuote = quotes[getRandom];
     return randQuote
 }
 
 
 /***
  * `printQuote` function
- *Prints quoteArr objects and puts them in the correct html slots based off their class names.
+ *Prints quote objects and puts them in the correct html slots based off their class names.
 ***/
 function printQuote() {
   let randomQuote = getRandomQuote();
 
   let showQuote = `<p class = "quote">${randomQuote.quote}</p>`;
-      showQuote = `<p class = "source">${randomQuote.source}`;
+      showQuote += `<p class = "source">${randomQuote.source}`;
 
-         if (randomQuote.citation !== undifined){
+         if (randomQuote.citation !== undefined){
            showQuote += `<span class = 'citation'> ${randomQuote.citation}</span>`
          }
 
-         if (randomQuote.year !== undifined) {
+         if (randomQuote.year !== undefined) {
            showQuote += `<span class = 'year'> ${randomQuote.year}</span>`
          }
 
          showQuote += `</p>`;
-       }
+
 
 
       document.getElementById('quote-box').innerHTML = showQuote;
 
-
+};
 
 /***
  * click event listener for the print quote button
